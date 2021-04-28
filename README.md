@@ -1,5 +1,5 @@
 # php-soda-MIN
-
+## Adaptación de la librería php-soda al programa MIN-ALCALDÍA (Alcaldía de Pereira)
 Una biblioteca PHP para trabajar con la API de datos abiertos de Socrata. Proporcionada como una alternativa a la implementación oficial de Socrata, esta biblioteca llena las deficiencias de la biblioteca oficial al proporcionar más funcionalidad, un enfoque más orientado a objetos, documentación y mucho código de ejemplo.
 
 Esta biblioteca es totalmente compatible con la interacción con la API de datos abiertos de Socrata (SODA) mediante la obtención de conjuntos de datos, el manejo de tokens, el manejo de autenticación básica y tokens OAuth2.0 para escribir o modificar conjuntos de datos.
