@@ -1,0 +1,17 @@
+<phpunit
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/3.7/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true">
+    <testsuites>
+    <testsuite name="PhpSoda Test Suite">
+      <directory suffix="Test.php" phpVersion="5.6.0" phpVersionOperator=">=">tests</directory>
+    </testsuite>
+  </testsuites>
+
+  <filter>
+    <whitelist>
+      <directory suffix="Test.php">tests</directory>
+    </whitelist>
+  </filter>
+</phpunit>
