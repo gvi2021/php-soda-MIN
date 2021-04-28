@@ -36,35 +36,38 @@ $soql->select("date_posted", "state", "sample_type")
 // Buscar el dataset en un array asociativo
 $results = $ds->getDataset($soql);
 
-# Updating a dataset
+# Actualizar un dataset
 
-// Create a client with information about the API to handle tokens and authentication
+// Cree un cliente con información sobre la API para manejar tokens y autenticación.
 $sc = new SodaClient("opendata.socrata.com", "<token here>", "email@example.com", "password");
 
-// The dataset to upload
+// El conjunto de datos para cargar
 $data = file_get_contents("dataset.json");
 
-// Access a dataset based on the API end point
+// Acceda a un conjunto de datos basado en el punto final de la API
 $ds = new SodaDataset($sc, "1234-abcd");
 
-// To upsert a dataset
+// Para actualizar un conjunto de datos
 $ds->upsert($data);
 
-// To replace a dataset
+// 
+Para reemplazar un conjunto de datos
 $ds->replace($data);
-Note: This library supports writing directly to datasets with the Socrata Open Data API. For datasets with one or more data transformations applied to the schema through the Socrata Data Management Experience (the user interface for creating datasets), use the Socrata Data Management API to apply those same transformations to all updates. For more details on when to use SODA vs the Socrata Data Management API, see the Data Management API documentation
 
-Getting Help
-To get help, see if our wiki has any information regarding your question. If the wiki can't help you, you may either create an issue or stop by IRC; I'm available on IRC as "allejo" so feel free to ping me. I recommend creating an issue in case others have the same question but for quick help, IRC works just fine.
+Nota: Esta biblioteca admite la escritura directamente en conjuntos de datos con la API de datos abiertos de Socrata. Para conjuntos de datos con una o más transformaciones de datos aplicadas al esquema a través de Socrata Data Management Experience (la interfaz de usuario para crear conjuntos de datos), use la API de Socrata Data Management para aplicar esas mismas transformaciones a todas las actualizaciones. Para obtener más detalles sobre cuándo usar SODA frente a la API de administración de datos de Socrata, consulte la documentación de la API de administración de datos.
 
-To report a bug or request a feature, please submit an issue.
+# Ayuda
+Para obtener ayuda, vea si nuestra wiki tiene alguna información sobre su pregunta. Si la wiki no puede ayudarlo, puede crear un problema o pasar por IRC; Estoy disponible en IRC como "allejo", así que no dudes en enviarme un ping. Recomiendo crear un problema en caso de que otros tengan la misma pregunta, pero para obtener ayuda rápida, IRC funciona bien.
 
-IRC
+Para informar un error o solicitar una función, envíe un problema.
+
+# IRC
 Channel: #socrata-soda
 Network: irc.freenode.net
 
-Thank You
-Official Socrata PHP Library
-C# Socrata Library
-License
+# Gracias a...
+Librería Oficial de Socrata PHP
+Librería de C# Socrata
+
+# Licencia
 MIT
