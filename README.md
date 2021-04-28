@@ -59,10 +59,12 @@ Secretaría TIC de la Alcaldia de Pereira. Para informar un error o solicitar un
 
 # IRC
 Channel: #socrata-soda
+
 Network: irc.freenode.net
 
 # Gracias a...
 Librería Oficial de Socrata PHP
+
 Librería de C# Socrata
 
 # Licencia
