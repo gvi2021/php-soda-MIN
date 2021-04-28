@@ -19,23 +19,24 @@ Aquí hay algunos ejemplos rápidos sobre cómo funciona PhpSoda, pero hay mucho
 
 # Obtener un dataset
 
-// Create a client with information about the API to handle tokens and authentication
+// Crea un cliente con información sobre la API para manejar tokens y autenticación
 $sc = new SodaClient("opendata.socrata.com");
 
-// Access a dataset based on the API end point
+// Acceder a un dataset con base en el 'end point' del API
 $ds = new SodaDataset($sc, "pkfj-5jsd");
 
-// Create a SoqlQuery that will be used to filter out the results of a dataset
+// Crear un SoqlQuery que será utilizado para filtrar los resultados del dataset
 $soql = new SoqlQuery();
 
-// Write a SoqlQuery naturally
+// Escribir un SoqlQuery
 $soql->select("date_posted", "state", "sample_type")
      ->where("state = 'AR'")
      ->limit(1);
 
-// Fetch the dataset into an associative array
+// Buscar el dataset en un array asociativo
 $results = $ds->getDataset($soql);
-Updating a dataset
+
+# Updating a dataset
 
 // Create a client with information about the API to handle tokens and authentication
 $sc = new SodaClient("opendata.socrata.com", "<token here>", "email@example.com", "password");
